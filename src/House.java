@@ -22,6 +22,18 @@ public class House {
         setOwner(owner);
     }
 
+    //six argument constructor
+
+
+    public House(String address, String type, double price, String name, int age, char gender){
+        setAddress(address);
+        setType(type);
+        setPrice(price);
+        Person person = new Person(name,age,gender);
+        setOwner(person);
+    }
+
+
 
     //Getters and setters....
 
@@ -57,8 +69,7 @@ public class House {
         this.type = type;
     }
 
-    @Override
     public String toString() {
-        return super.toString();
+        return "Address: "+ getAddress()+"\nType: "+ getType()+ "\nPrice: "+getPrice() + "\n" + getOwner().toString();
     }
 }
