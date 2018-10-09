@@ -29,8 +29,8 @@ public class House {
         setAddress(address);
         setType(type);
         setPrice(price);
-        Person person = new Person(name,age,gender);
-        setOwner(person);
+        Person owner = new Person(name,age,gender);
+        setOwner(owner);
     }
 
 
