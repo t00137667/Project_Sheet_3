@@ -1,8 +1,19 @@
+/**
+ * 
+ * @author t00137667
+ * @version 1.0
+ * This class declares an object called House with takes in details about the house.
+ */
+
 public class House {
+    //Declaring attributes;
+
     private String address;
     private String type;
     private double price;
     private Person owner;
+
+    //Start Constructors
 
     //no argument constructor
 
@@ -15,6 +26,13 @@ public class House {
 
     //four argument constructor
 
+    /**
+     *
+     * @param address The address of the house
+     * @param type The type of house
+     * @param price The price of the house
+     * @param owner The current owner of the house
+     */
     public House(String address,String type,double price, Person owner){
         setAddress(address);
         setType(type);
@@ -24,7 +42,19 @@ public class House {
 
     //six argument constructor
 
-
+    /**
+     * This method takes in three arguements for the house, and three arguments for the person
+     * for six arguments in total
+     * It then creates a Person object with the arguments
+     * and assigns it with the other arguments to the House object
+     *
+     * @param address The address of the house
+     * @param type The type of house
+     * @param price The price of the house
+     * @param name The name of the owner of the house
+     * @param age The age of the owner of the house
+     * @param gender The gender of the owner of the house
+     */
     public House(String address, String type, double price, String name, int age, char gender){
         setAddress(address);
         setType(type);
@@ -33,7 +63,7 @@ public class House {
         setOwner(owner);
     }
 
-
+    //End Constructors
 
     //Getters and setters....
 
@@ -69,6 +99,10 @@ public class House {
         this.type = type;
     }
 
+    /**
+     *
+     * @return The object attributes as a string
+     */
     public String toString() {
         return "Address: "+ getAddress()+"\nType: "+ getType()+ "\nPrice: "+getPrice() + "\n" + getOwner().toString();
     }
