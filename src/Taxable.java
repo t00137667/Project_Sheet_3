@@ -1,3 +1,3 @@
 public interface Taxable {
-    double calcTax();
+    double calcTax(double a);
 }

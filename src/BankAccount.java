@@ -2,25 +2,13 @@ public abstract class BankAccount implements Taxable, Transactable {
     protected String name;
     protected int accNum;
 
-    SavingsAccount savingsAccount = new SavingsAccount();
+    //abstract methods
+    public abstract void lodge(double a);
+    public abstract void withdraw(double a);
+    public abstract double calcTax(double a);
 
-    //public abstract void lodge(double a);
-    //public abstract void withdraw(double a);
 
-    public void lodge(double a){
-         a = savingsAccount.getBalance();
-
-         System.out.print(a);
-    }
-
-    public void withdraw(double a){
-
-    }
-
-    public double calcTax(){
-        return 0;
-    }
-
+    //Getters and Setters
     public int getAccNum() {
         return accNum;
     }
@@ -35,5 +23,11 @@ public abstract class BankAccount implements Taxable, Transactable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "\nAccount Number: " + getAccNum() + "\nName: " + getName();
+        //This method seem unnecessary as you cannot make an instance of an abstract class
     }
 }
