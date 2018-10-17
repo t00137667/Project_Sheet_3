@@ -2,6 +2,10 @@ public class Memory {
     private String type;
     private int size;
 
+    public Memory(){
+        this("Unknown",0);
+    }
+
     public Memory(String type, int size){
         setType(type);
         setSize(size);
